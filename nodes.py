@@ -4,7 +4,8 @@ from comfy_extras.nodes_upscale_model import ImageUpscaleWithModel
 class UpscaleImageByUsingModel:
     rescale_methods = ["nearest-exact", "bilinear", "area", "bicubic", "lanczos"]
      
-    RETURN_TYPES = ("IMAGE")
+    RETURN_TYPES = ("IMAGE",)
+
     FUNCTION = "upscale"
     CATEGORY = "image/upscaling"
     
@@ -17,10 +18,10 @@ class UpscaleImageByUsingModel:
             "required": {
                 "upscale_model": ("UPSCALE_MODEL",),
                 "image": ("IMAGE",),
-                "upscale_by": ("INT", {
-                    "default": 2,
-                    "min": 1,
-                    "max": 8,
+                "upscale_by": ("FLOAT", {
+                    "default": 2.0,
+                    "min": 1.0,
+                    "max": 8.0,
                     "step": 0.05,
                 }),
                 "rescale_method": (self.rescale_methods,),
