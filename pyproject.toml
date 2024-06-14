@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-upscale-by-model"
+description = "This custom node allow upscaling an image by a factor using a model."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/TheBill2001/comfyui-upscale-by-model"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "comfyui-upscale-by-model"
+Icon = ""
